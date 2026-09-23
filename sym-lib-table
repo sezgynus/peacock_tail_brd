@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name peacock_tail_brd)(type Legacy)(uri ${KIPRJMOD}/peacock_tail_brd.lib)(options "")(descr ""))
+)

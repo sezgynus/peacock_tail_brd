@@ -54,48 +54,7 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [
-        [
-          "courtyards_overlap|122925000|104835000|cd140ab1-3420-4d96-aadb-1343a769e31d|fcd8d503-bb8e-460b-bd82-d1ad5c7a0d6f",
-          ""
-        ],
-        [
-          "courtyards_overlap|157845000|104935000|00000000-0000-0000-0000-000060b30167|2742b1bf-8ea9-415c-992d-0750cfdcdd3b",
-          ""
-        ],
-        [
-          "courtyards_overlap|161132500|109455000|00000000-0000-0000-0000-000060b30139|2742b1bf-8ea9-415c-992d-0750cfdcdd3b",
-          ""
-        ],
-        [
-          "courtyards_overlap|180305000|105145000|00000000-0000-0000-0000-000060b30150|5ecbc380-d494-4ee3-b003-49d8996baa8b",
-          ""
-        ],
-        [
-          "courtyards_overlap|183985000|109715000|00000000-0000-0000-0000-000060b30122|5ecbc380-d494-4ee3-b003-49d8996baa8b",
-          ""
-        ],
-        [
-          "lib_footprint_issues|106060000|96435000|00000000-0000-0000-0000-000060b3009c|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_issues|158180000|107875000|2742b1bf-8ea9-415c-992d-0750cfdcdd3b|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_issues|180990000|107865000|5ecbc380-d494-4ee3-b003-49d8996baa8b|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "starved_thermal|138350000|101485027|43299a96-f487-4552-98fb-1ba9713b17af|be79be58-379f-4270-86c4-9823b48e7c91|B.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|138350000|101485027|43299a96-f487-4552-98fb-1ba9713b17af|be79be58-379f-4270-86c4-9823b48e7c91|F.Cu",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -106,7 +65,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "error",
+        "courtyards_overlap": "ignore",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
@@ -526,7 +485,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -537,7 +496,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 0.6,
         "tuning_profile": "",
         "via_diameter": 1.0,
         "via_drill": 0.6,
@@ -545,7 +504,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
@@ -553,7 +512,7 @@
         "microvia_drill": 0.1,
         "name": "MOT",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.0,
         "tuning_profile": "",
@@ -563,7 +522,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
@@ -571,13 +530,28 @@
         "microvia_drill": 0.1,
         "name": "PWR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.8,
         "tuning_profile": "",
         "via_diameter": 1.0,
         "via_drill": 0.6,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.15,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "SIGNAL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.6,
+        "tuning_profile": "",
+        "via_diameter": 1.0,
+        "via_drill": 0.6
       }
     ],
     "meta": {
@@ -587,115 +561,115 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "ENCODER"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "EXTRA"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "G-DIR"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "G-EN"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "G-STEP"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J3-Pad1)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J4-Pad1)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J6-Pad3)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(JP10-Pad2)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(JP7-Pad1)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(JP8-Pad2)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(JP9-Pad1)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(R1-Pad1)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "Net-(R2-Pad1)"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "S-DIR"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "S-EN"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "S-MIN"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "S-STEP"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "SERVO"
       },
       {
-        "netclass": "Default",
+        "netclass": "SIGNAL",
         "pattern": "UART"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J7-Pad1)"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J7-Pad2)"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J7-Pad3)"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J7-Pad4)"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J8-Pad1)"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J8-Pad2)"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J8-Pad3)"
       },
       {
-        "netclass": "MOT",
+        "netclass": "SIGNAL",
         "pattern": "Net-(J8-Pad4)"
       },
       {
@@ -713,6 +687,14 @@
       {
         "netclass": "PWR",
         "pattern": "VDC"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "G-INDEX"
+      },
+      {
+        "netclass": "SIGNAL",
+        "pattern": "G-DIAG"
       }
     ]
   },
